@@ -1,49 +1,118 @@
-body{
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin: 0;
   padding: 0;
 }
- #logo-nav{
+
+#logo-nav {
   height: 1.5rem;
- }
+}
 
- .container-categoria{
+.container-categoria {
   margin: 1rem;
- }
+}
 
- .container_tarjetas{
+.categoria_titulo {
+  margin: 1rem;
+}
+
+.container_tarjetas {
   display: flex;
-  overflow: hidden;
- }
+  flex-wrap: wrap;
+}
 
- .tarjeta{
-  margin-right: 1rem;
-  width: 20%;
+.tarjeta {
+  margin: 1rem;
+  width: 17%;
+  height: 25rem;
   border: 1px grey solid;
   border-radius: 5px;
- }
+}
 
- .tarjeta-imagen{
+.tarjeta-imagen {
+  border-radius: 5px 5px 0 0;
+  height: 35%;
   width: 100%;
- }
+}
 
- .tarjeta-cuerpo{
-  margin: 0.5rem;
- }
+.tarjeta-cuerpo {
+  height: 65%;
+  padding: 0.5rem;
+}
 
- .txt-footer{
+.tarjeta-titulo {
+  font-size: 1.3rem;
+  margin: 0;
+  height: 20%;
+}
+
+.tarjeta-descripcion {
+  margin: 0 0 2px 0;
+  height: 65%;
+  width: 100%;
+  font-size: 0.8rem;
+  overflow: hidden;
+}
+
+.tarjeta-boton {
+  padding: 0.2rem;
+  margin: 0;
+  font-size: 0.9rem;
+  border: 1px solid var(--color-base);
+  border-radius: 5px;
+  background-color: var(--color-base);
+  color: aliceblue;
+}
+
+.tarjeta-boton:hover{
+  background-color: aliceblue;
+  color: var(--color-base);
+}
+
+.txt-footer {
   text-align: center;
- }
+}
 
- @media screen and (max-width: 768px){
-  .container-categoria_videos{
+@media screen and (max-width: 768px) {
+  #logo-nav {
+    height: 1rem;
+  }
+
+  .container-categoria {
+    margin: 0;
+  }
+
+  .categoria_titulo {
+    font-size: 1.2rem;
+    margin: 0.5rem 1rem;
+  }
+
+  .container_tarjetas {
     justify-content: space-between;
-    overflow: hidden;
   }
 
-  .tarjeta{
-    width: 45%;
-    margin-bottom: 1rem;
+  .tarjeta {
+    width: 42%;
+    height: 20rem;
   }
 
- }
+  .tarjeta-imagen {
+    height: 28%;
+  }
+
+  .tarjeta-cuerpo{
+    height: 72%;
+  }
+
+  .tarjeta-titulo {
+    font-size: 1rem;
+  }
+
+  .tarjeta-boton {
+    font-size: 0.8rem;
+  }
+
+  .txt-footer {
+    font-size: 0.7rem;
+  }
+}
