@@ -1,10 +1,11 @@
 const apiKey = "e81fcd60bfcf72de5f59dfb743748813";
 
-const api_url = "https://api.themoviedb.org/3/movie/popular?api_key=" + apiKey + "&language=es-ES&page=1";
+
+const api_url = "https://api.themoviedb.org/3/tv/popular?api_key=" + apiKey + "&language=es-ES&page=5";
 
 const img_url = "https://image.tmdb.org/t/p/original";
 
-const htmlResponse = document.querySelector("#container_tarjetas");
+const htmlResponse = document.querySelector("#container_series");
 
 fetch(api_url)
   .then((response) => response.json())
@@ -29,10 +30,10 @@ fetch(api_url)
 
       const btnTarjeta = document.createElement(`button`);
       btnTarjeta.classList.add("tarjeta-boton");
-      btnTarjeta.appendChild(document.createTextNode("Reproducir"));
+      btnTarjeta.appendChild(document.createTextNode("Ver temporadas"));
 
       imgTarjeta.setAttribute("src", `${img_url}${movie.backdrop_path}`);
-      tituloTarjeta.appendChild(document.createTextNode(movie.title));
+      tituloTarjeta.appendChild(document.createTextNode(movie.name));
       descripcionTarjeta.appendChild(document.createTextNode(movie.overview));
       divTarjeta.appendChild(imgTarjeta);
       divTarjeta.appendChild(divCuerpoTarjeta);
