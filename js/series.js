@@ -14,7 +14,7 @@ fetch(api_url)
     console.log(results);
     results.forEach((movie) => {
       const divTarjeta = document.createElement(`div`);
-      divTarjeta.classList.add("tarjeta");
+      divTarjeta.classList.add("tarjeta-serie");
 
       const imgTarjeta = document.createElement(`img`);
       imgTarjeta.classList.add("tarjeta-imagen");
@@ -28,8 +28,9 @@ fetch(api_url)
       const descripcionTarjeta = document.createElement(`p`);
       descripcionTarjeta.classList.add("tarjeta-descripcion");
 
-      const btnTarjeta = document.createElement(`button`);
+      const btnTarjeta = document.createElement(`a`);
       btnTarjeta.classList.add("tarjeta-boton");
+      btnTarjeta.setAttribute("href", "/detalle-pelicula.html");
       btnTarjeta.appendChild(document.createTextNode("Ver temporadas"));
 
       imgTarjeta.setAttribute("src", `${img_url}${movie.backdrop_path}`);

@@ -27,8 +27,9 @@ fetch(api_url)
       const descripcionTarjeta = document.createElement(`p`);
       descripcionTarjeta.classList.add("tarjeta-descripcion");
 
-      const btnTarjeta = document.createElement(`button`);
+      const btnTarjeta = document.createElement(`a`);
       btnTarjeta.classList.add("tarjeta-boton");
+      btnTarjeta.setAttribute("href", "/detalle-pelicula.html");
       btnTarjeta.appendChild(document.createTextNode("Ver trailer"));
 
       imgTarjeta.setAttribute("src", `${img_url}${movie.backdrop_path}`);
