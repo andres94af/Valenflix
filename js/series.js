@@ -13,7 +13,6 @@ fetch(api_url)
   .then((response) => response.json())
   .then((lista) => lista.results)
   .then((results) => {
-    console.log(results);
     results.forEach((movie) => {
       let divTarjeta = document.createElement("div");
       divTarjeta.classList.add("tarjeta-serie");
@@ -22,7 +21,7 @@ fetch(api_url)
       <div class="tarjeta-cuerpo">
         <h5 class="tarjeta-titulo">${movie.name}</h5>
         <p class="tarjeta-descripcion">${movie.overview}</p>
-        <a class="tarjeta-boton" href="detalle-pelicula.html" id="${movie.id}">Ver temporadas</a>
+        <a class="tarjeta-boton" href="detalle-serie.html?id=${movie.id}">Ver temporadas</a>
       </div>`;
 
       divTarjeta.innerHTML = contenido

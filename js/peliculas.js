@@ -1,6 +1,6 @@
 const apiKey = "e81fcd60bfcf72de5f59dfb743748813";
 
-const api_url = "https://api.themoviedb.org/3/movie/popular?api_key=" + apiKey + "&language=es-ES&page=1";
+const api_url = "https://api.themoviedb.org/3/movie/popular?api_key=" + apiKey + "&language=es-ES";
 
 const img_url = "https://image.tmdb.org/t/p/original";
 
@@ -10,7 +10,6 @@ fetch(api_url)
   .then((response) => response.json())
   .then((lista) => lista.results)
   .then((results) => {
-    console.log(results);
     results.forEach((movie) => {
       let divTarjeta = document.createElement("div");
       divTarjeta.classList.add("tarjeta-pelicula");
@@ -19,7 +18,7 @@ fetch(api_url)
       <div class="tarjeta-cuerpo">
         <h5 class="tarjeta-titulo">${movie.title}</h5>
         <p class="tarjeta-descripcion">${movie.overview}</p>
-        <a class="tarjeta-boton" href="detalle-pelicula.html" id="${movie.id}">Ver trailer</a>
+        <a class="tarjeta-boton" href="detalle-pelicula.html?id=${movie.id}">Ver mas</a>
       </div>`;
 
       divTarjeta.innerHTML = contenido;
