@@ -1,3 +1,6 @@
 :root{
-  --color-base: rgb(22,145,180);
+  --color-base: rgb(7, 116, 146);
+  --titulo: rgb(67, 67, 67);
+  --descripcion:  rgb(116, 116, 116);
+  --estrellas: rgb(234, 199, 0);
 }

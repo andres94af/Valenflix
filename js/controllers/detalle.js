@@ -8,11 +8,17 @@ function obtenerDetalleSerie(){
   const id = url.searchParams.get("id");
   servicios.verDetalleSerie(id)
     .then((detalle) => {
+      const temporadas = detalle.seasons;
       detalleConteedorSerie.innerHTML = 
       `<img src="https://image.tmdb.org/t/p/original${detalle.poster_path}" alt="img-pelicula" class="detalle-img">
       <div class="detalle-cuerpo">
         <h1 class="detalle-titulo">${detalle.name}</h1>
+        <p class="detalle-descripcion">${detalle.tagline}</p>
+        <h5 class="detalle-sinopsis" >Sinopsis:</h5>
         <p class="detalle-descripcion">${detalle.overview}</p>
+        <p class="detalle-fecha">Fecha de lanzamiento: ${detalle.first_air_date}</p>
+        <p class="detalle-fecha">Cantidad de temporadas: ${temporadas.length}</p>
+        <p class="detalle-estrellas">${Math.round(detalle.vote_average)}/10 &#9733</p>
         <a class="detalle-btn" href="#">Ver online</a>
       </div>`
     });
@@ -28,7 +34,11 @@ function obtenerDetallePelicula(){
       `<img src="https://image.tmdb.org/t/p/original${detalle.poster_path}" alt="img-pelicula" class="detalle-img">
       <div class="detalle-cuerpo">
         <h1 class="detalle-titulo">${detalle.title}</h1>
+        <p class="detalle-descripcion">${detalle.tagline}</p>
+        <h5 class="detalle-sinopsis" >Sinopsis:</h5>
         <p class="detalle-descripcion">${detalle.overview}</p>
+        <p class="detalle-fecha">Fecha de lanzamiento: ${detalle.release_date}</p>
+        <p class="detalle-estrellas">${Math.round(detalle.vote_average)}/10 &#9733</p>
         <a class="detalle-btn" href="#">Ver online</a>
       </div>`
     });

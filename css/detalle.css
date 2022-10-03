@@ -1,11 +1,45 @@
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 #logo-nav {
   height: 1.5rem;
+}
+
+#valenflix{
+  color: var(--color-base);
+  font-weight: bold;
 }
 
 .detalle-contenedor {
   display: flex;
   padding: 2rem 1rem;
   justify-content: space-between;
+  background-color: aliceblue;
+}
+
+.detalle-titulo{
+  color: var(--color-base);
+  text-decoration: underline;
+}
+
+.detalle-sinopsis{
+  color: var(--titulo);
+}
+
+.detalle-descripcion{
+  color: var(--descripcion);
+}
+
+.detalle-fecha{
+  color: var(--titulo);
+}
+
+.detalle-estrellas{
+  color: var(--estrellas);
+  font-weight: bold;
 }
 
 .detalle-img {
@@ -33,6 +67,7 @@
 }
 
 .txt-footer {
+  margin: 0.5rem;
   text-align: center;
   font-size: 0.8rem;
 }

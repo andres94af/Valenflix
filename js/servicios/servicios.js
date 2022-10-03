@@ -1,9 +1,15 @@
 const apiKey = "e81fcd60bfcf72de5f59dfb743748813";
 
 const verListadoPeliculas = ()=>{
-  return fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=es-ES&page=1`)
+  return fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&language=es-ES&page=1`)
   .then((response) => response.json())
   .then((lista) => lista.results)
+}
+
+const verListadoPeliculasPopular = ()=>{
+    return fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=es-ES&page=1`)
+    .then((response) => response.json())
+    .then((lista) => lista.results)
 }
 
 const verListadoSeries = ()=>{
@@ -26,5 +32,6 @@ export const servicios = {
   verListadoPeliculas,
   verListadoSeries,
   verDetalleSerie,
-  verDetallePelicula
+  verDetallePelicula,
+  verListadoPeliculasPopular
 }

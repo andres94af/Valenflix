@@ -32,7 +32,7 @@ const listadoSeries = ()=>{
       <div class="tarjeta-cuerpo">
         <h5 class="tarjeta-titulo">${movie.name}</h5>
         <p class="tarjeta-descripcion">${movie.overview}</p>
-        <a class="tarjeta-boton" href="detalle-serie.html?id=${movie.id}">Ver temporadas</a>
+        <a class="tarjeta-boton" href="detalle-serie.html?id=${movie.id}">Ver mas</a>
       </div>`;
       divTarjeta.innerHTML = contenido
       containerSeries.appendChild(divTarjeta);
